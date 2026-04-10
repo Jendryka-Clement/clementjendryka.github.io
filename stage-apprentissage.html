@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Stage / Apprentissage — Clément Jendryka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --cj-border: rgba(15,23,42,.10);
+      --cj-muted: rgba(15,23,42,.72);
+      --cj-shadow: 0 12px 24px rgba(0,0,0,.10);
+    }
+
+    .page-hero{
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(28,66,186,.95), rgba(51,168,240,.88)),
+        url("assets/img/hero-bg.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 72px 0 56px;
+    }
+
+    .page-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 35%);
+      pointer-events:none;
+    }
+
+    .page-hero .container{
+      position:relative;
+      z-index:1;
+    }
+
+    .page-kicker{
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .82rem;
+      opacity: .82;
+      margin-bottom: .75rem;
+    }
+
+    .page-title{
+      font-size: clamp(2.1rem, 4vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .page-lead{
+      max-width: 900px;
+      font-size: 1.06rem;
+      color: rgba(255,255,255,.9);
+      margin-bottom: 0;
+    }
+
+    .soft-card{
+      background: #fff;
+      border: 1px solid var(--cj-border);
+      border-radius: 18px;
+      box-shadow: var(--cj-shadow);
+    }
+
+    .section-title{
+      font-size: 1.9rem;
+      font-weight: 800;
+      margin-bottom: .35rem;
+      color: #0f172a;
+    }
+
+    .section-subtitle{
+      color: var(--cj-muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .stage-block-title{
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .meta-list{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .meta-chip{
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(37,99,235,.06);
+      border: 1px solid rgba(37,99,235,.10);
+      font-size: .95rem;
+    }
+
+    .meta-chip strong{
+      color: #0f172a;
+    }
+
+    .mini-title{
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 1.2rem;
+      margin-bottom: .65rem;
+      color: #0f172a;
+    }
+
+    .stage-list{
+      margin-bottom: 0;
+      padding-left: 1.2rem;
+    }
+
+    .stage-list li{
+      margin-bottom: .55rem;
+    }
+
+    .side-title{
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: .8rem;
+      color: #0f172a;
+    }
+
+    .doc-btn{
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .badge-soft{
+      display:inline-flex;
+      align-items:center;
+      padding: .42rem .7rem;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 600;
+      margin: 0 6px 8px 0;
+      border: 1px solid rgba(15,23,42,.10);
+    }
+
+    .badge-admin{ background:#eef2ff; color:#1d4ed8; }
+    .badge-connect{ background:#ecfeff; color:#0891b2; }
+    .badge-secure{ background:#eff6ff; color:#2563eb; }
+    .badge-watch{ background:#ecfeff; color:#0f766e; }
+    .badge-manage{ background:#f8fafc; color:#334155; }
+
+    .timeline-note{
+      font-size: .95rem;
+      color: var(--cj-muted);
+    }
+
+    .alert-safe{
+      border-radius: 18px;
+      border: 1px solid rgba(234,179,8,.28);
+      background: rgba(254,249,195,.65);
+      color: #713f12;
+    }
+
+    .future-card{
+      background: linear-gradient(135deg, rgba(37,99,235,.08), rgba(6,182,212,.08));
+      border: 1px solid rgba(37,99,235,.14);
+    }
+
+    @media (max-width: 767px){
+      .meta-list{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Clément Jendryka</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="stage-apprentissage.html">Stage / Apprentissage</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-kicker">EXPÉRIENCE EN ENTREPRISE</div>
+      <h1 class="page-title">Stage / Apprentissage</h1>
+      <p class="page-lead">
+        Cette page présente mon expérience chez <strong>Axians Infras Nord</strong>, au sein de la cellule
+        <strong>Free / Cellnex</strong>, à travers mes missions, mes responsabilités opérationnelles,
+        mes livrables et ma progression dans un environnement télécom concret.
+      </p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- PROJET D'EVOLUTION -->
+    <section class="mb-5">
+      <h2 class="section-title">Projet de poursuite d’études</h2>
+      <p class="section-subtitle">
+        Une continuité logique entre mon parcours actuel, mon alternance et mon objectif professionnel à moyen terme.
+      </p>
+
+      <div class="soft-card future-card p-4">
+        <h3 class="mini-title mt-0">Objectif visé</h3>
+        <p>
+          À l’issue de mon BUT Réseaux &amp; Télécommunications, je souhaite poursuivre mes études à
+          <strong>l’IMT</strong> en formation d’ingénieur, idéalement en <strong>alternance</strong> et,
+          si possible, au sein de la même entreprise, <strong>Axians Infras Nord</strong>, pendant
+          <strong>trois années supplémentaires</strong>.
+        </p>
+
+        <p class="mb-0">
+          Cette continuité me permettrait de consolider les compétences déjà acquises sur le terrain,
+          d’approfondir ma maîtrise des environnements télécoms et réseaux, et de développer une vision
+          plus complète des dimensions techniques, organisationnelles et stratégiques d’un projet.
+          L’objectif est d’optimiser au maximum ma montée en compétences tout en conservant un ancrage
+          concret dans le monde professionnel, afin d’aboutir à un <strong>diplôme d’ingénieur</strong>
+          en cohérence avec mon projet d’évolution.
+        </p>
+      </div>
+    </section>
+
+    <!-- APPRENTISSAGE -->
+    <section class="mb-5">
+      <h2 class="section-title">Apprentissage — Axians Infras Nord (Cellule Free / Cellnex)</h2>
+      <p class="section-subtitle">
+        Une expérience d’alternance centrée sur le suivi opérationnel de sites radio, la coordination d’intervenants,
+        la conformité documentaire, les opérations techniques et la préparation des mises en service.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="soft-card p-4 h-100">
+
+            <div class="meta-list">
+              <div class="meta-chip">
+                <strong>Poste :</strong> Apprenti conducteur de travaux
+              </div>
+              <div class="meta-chip">
+                <strong>Période :</strong> septembre 2025 → 31/08/2026
+              </div>
+              <div class="meta-chip">
+                <strong>Environnement :</strong> Sites mobiles Free Mobile / Cellnex
+              </div>
+              <div class="meta-chip">
+                <strong>Activités :</strong> DOE, VF, VIC, injection software, Orion, recettes
+              </div>
+              <div class="meta-chip">
+                <strong>Contexte :</strong> Déploiement, exploitation et mise en conformité de sites radio
+              </div>
+              <div class="meta-chip">
+                <strong>Orientation métier :</strong> Conducteur de travaux télécom
+              </div>
+            </div>
+
+            <h3 class="mini-title">Contexte</h3>
+            <p>
+              Au sein de la cellule <strong>Free / Cellnex</strong> d’Axians Infras Nord, j’interviens sur
+              différentes étapes du cycle de vie des sites radio, qu’il s’agisse de sites neufs ou d’évolutions
+              techniques telles que <strong>C10, RAN ou MIMO</strong>. Mon rôle ne se limite pas à une tâche unique :
+              il combine le suivi documentaire, la préparation opérationnelle, la coordination d’acteurs terrain,
+              des interventions techniques ponctuelles et une montée en compétences progressive vers la logique
+              de <strong>conducteur de travaux</strong>.
+            </p>
+
+            <p>
+              Cette alternance me permet d’être au contact direct des réalités du déploiement télécom :
+              exigences clients, conformité réglementaire, organisation de visites, préparation de chantiers,
+              vérifications documentaires, traitement des réserves, support aux équipes terrain et échanges constants
+              avec les différents intervenants du projet.
+            </p>
+
+            <h3 class="mini-title">Missions réalisées</h3>
+            <ul class="stage-list">
+              <li>
+                Réalisation des <strong>DOE Free et Cellnex</strong> : récupération des documents manquants,
+                mise à jour des plans, intégration des reportages photos, contrôle global du dossier et soumission finale
+                sur <strong>COS Free</strong> ou <strong>AGORA Cellnex</strong>.
+              </li>
+              <li>
+                <strong>Planification et organisation des VFs</strong> (Visites Finales) nécessaires à la mise en service
+                d’un site, en coordonnant simultanément les différents intervenants requis :
+                <strong>ACS</strong> pour la sécurité, <strong>huissier</strong> pour le constat, et
+                <strong>SOCOTEC</strong> pour la <strong>VIE</strong>.
+              </li>
+              <li>
+                Participation à plusieurs <strong>VIC</strong> (Visites d’Inspection Commune) en lien avec les acteurs
+                du projet, afin d’anticiper les contraintes techniques, réglementaires et d’accès.
+              </li>
+              <li>
+                Réalisation de l’<strong>injection software</strong> sur certains sites une fois l’énergie disponible,
+                afin d’initialiser l’AMOD, détecter les modules radio, synchroniser le GPS et vérifier la configuration
+                avant intégration.
+              </li>
+              <li>
+                Réalisation de l’<strong>Orion</strong>, permettant d’assurer la supervision énergie et de vérifier
+                la conformité des redresseurs et batteries dans la <strong>Cab One</strong>.
+              </li>
+              <li>
+                Participation aux <strong>recettes</strong> sur site avec <strong>Free Mobile</strong> et
+                <strong>Free Réseau</strong>, avec pour objectif le transfert du site, la levée des réserves
+                et l’identification des actions restant à planifier si nécessaire.
+              </li>
+              <li>
+                Gestion d’un volume important d’<strong>échanges opérationnels</strong> : réponses aux mails de planification,
+                demandes de documents, organisation de visites techniques, coordination avec Free, Cellnex,
+                sous-traitants et techniciens Axians.
+              </li>
+              <li>
+                Participation aux aspects plus <strong>économiques et organisationnels</strong> des projets :
+                commandes, devis, découverte de la logique des <strong>BA (Budgets d’Affaire)</strong> et compréhension
+                progressive du suivi financier d’un chantier télécom.
+              </li>
+              <li>
+                Préparation des sites au <strong>magasin</strong> : vérification du matériel, préparation des éléments
+                pour les équipes terrain, constitution de classeurs complets (plans, accès, photos, consignes de sécurité,
+                configurations).
+              </li>
+              <li>
+                Support ponctuel <strong>terrain</strong> lorsque nécessaire, en complément des tâches de coordination
+                et de préparation.
+              </li>
+            </ul>
+
+            <h3 class="mini-title">Apport humain et professionnel</h3>
+            <p class="mb-0">
+              Sur le plan humain, je me sens pleinement à l’aise au sein de l’entreprise. J’y retrouve une
+              bonne cohésion d’équipe, un réel esprit d’entraide et un environnement favorable à l’apprentissage.
+              Cette dynamique facilite mon intégration, me permet de progresser rapidement et renforce ma compréhension
+              des responsabilités concrètes liées au métier de conducteur de travaux dans le secteur télécom.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="soft-card p-4 h-100">
+            <h3 class="side-title">Livrables</h3>
+            <p class="small text-muted mb-3">
+              Version publique uniquement. Aucun document sensible ne doit être diffusé.
+            </p>
+
+            <a class="btn btn-outline-primary doc-btn w-100 mb-2"
+               href="assets/docs/apprentissage/rapport-apprentissage.pdf" target="_blank" rel="noopener">
+              Télécharger — Rapport apprentissage (PDF)
+            </a>
+
+            <a class="btn btn-outline-secondary doc-btn w-100"
+               href="assets/docs/apprentissage/annexes-apprentissage.pdf" target="_blank" rel="noopener">
+              Télécharger — Annexes (PDF)
+            </a>
+
+            <hr class="my-4">
+
+            <h3 class="side-title">Compétences mobilisées</h3>
+            <div>
+              <span class="badge-soft badge-admin">Administrer</span>
+              <span class="badge-soft badge-connect">Connecter</span>
+              <span class="badge-soft badge-secure">Sécuriser</span>
+              <span class="badge-soft badge-watch">Surveiller</span>
+              <span class="badge-soft badge-manage">Piloter / Organiser</span>
+            </div>
+
+            <p class="timeline-note mt-3 mb-0">
+              Cette expérience mobilise fortement la coordination opérationnelle, la rigueur documentaire,
+              la gestion d’intervenants et la compréhension globale d’un projet télécom.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE -->
+    <section class="mb-5">
+      <h2 class="section-title">Stage — Axians Infras Nord (historique)</h2>
+      <p class="section-subtitle">
+        Première immersion dans l’environnement télécom Free / Cellnex, à l’origine de ma montée en compétences
+        et de ma continuité en entreprise.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="soft-card p-4 h-100">
+            <div class="meta-list">
+              <div class="meta-chip">
+                <strong>Période :</strong> 07/04/2025 → 27/06/2025
+              </div>
+              <div class="meta-chip">
+                <strong>Objectif :</strong> Découverte et montée en compétences sur les activités télécoms
+              </div>
+            </div>
+
+            <h3 class="mini-title">Contexte</h3>
+            <p>
+              Ce stage a constitué ma première immersion dans le fonctionnement opérationnel de la cellule
+              Free / Cellnex. Il m’a permis de découvrir les bases du traitement documentaire,
+              de la préparation d’interventions et du suivi de sites dans un environnement réel.
+            </p>
+
+            <h3 class="mini-title">Ce que j’ai réalisé</h3>
+            <ul class="stage-list mb-0">
+              <li>Production documentaire : DOE, collecte de pièces, contrôle de conformité et corrections.</li>
+              <li>Support exploitation : préparation d’interventions, organisation de visites, suivi des échanges.</li>
+              <li>Suivi terrain ponctuel : levées de réserves, contrôles visuels et retours photos.</li>
+              <li>Découverte progressive du fonctionnement global d’un projet de déploiement télécom.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="soft-card p-4 h-100">
+            <h3 class="side-title">Livrables</h3>
+
+            <a class="btn btn-outline-primary doc-btn w-100 mb-2"
+               href="assets/docs/stage/rapport-stage-2025.pdf" target="_blank" rel="noopener">
+              Télécharger — Rapport de stage (PDF)
+            </a>
+
+            <a class="btn btn-outline-secondary doc-btn w-100"
+               href="assets/docs/stage/soutenance-stage.pdf" target="_blank" rel="noopener">
+              Télécharger — Support de soutenance (PDF)
+            </a>
+
+            <p class="small text-muted mt-3 mb-0">
+              Ces documents doivent rester anonymisés et expurgés de toute donnée sensible liée aux sites,
+              aux accès ou aux clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light mt-5 py-4">
+    <div class="container text-center">
+      <p class="mb-1">© Clément Jendryka — BUT R&amp;T</p>
+      <p class="mb-0">
+        <a href="mentions-légales.html" class="text-light">Mentions légales</a> |
+        <a href="crédits.html" class="text-light">Crédits</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
