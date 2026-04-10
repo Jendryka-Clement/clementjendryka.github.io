@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAE 3.01 — Étude et mise en œuvre d’un système de transmission</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Clément Jendryka</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Afficher le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="../cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link active" href="../portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../apprentissage.html">Stage / Apprentissage</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <a class="btn btn-outline-secondary btn-sm mb-3" href="../portfolio.html">← Retour au portfolio</a>
+
+    <h1 class="display-6 fw-bold mb-2">SAE 3.01 — Étude et mise en œuvre d’un système de transmission</h1>
+    <p class="text-muted mb-3">
+      SDR (PlutoSDR), GNU Radio, mesures spectrales et compréhension d’une chaîne émission/réception.
+    </p>
+
+    <!-- Tags compétences (même logique que SAE 1.01) -->
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <span class="badge text-bg-primary">Connecter</span>
+      <span class="badge text-bg-primary">Programmer</span>
+      <span class="badge text-bg-primary">Surveiller</span>
+    </div>
+
+    <!-- Cartes haut (même esprit que SAE 1.01 : infos + docs) -->
+    <div class="row g-3 mb-4">
+      <div class="col-lg-8">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div><strong>Type :</strong> Travail en binôme / groupe</div>
+                <div><strong>Thématique :</strong> SDR, analyse spectrale, modulation/démodulation</div>
+                <div><strong>Année :</strong> 2024–2025</div>
+              </div>
+              <div class="col-md-6">
+                <div><strong>Outils / matériels :</strong> ADALM-Pluto (PlutoSDR), GNU Radio</div>
+                <div><strong>Mesure :</strong> analyseur de spectre (ex. Spectran) + antenne HyperLOG</div>
+                <div><strong>Livrables :</strong> rapport + support de présentation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="h6 fw-bold mb-2">Documents (PDF)</h2>
+
+            <!-- Chemins relatifs : on est dans /projects donc ../assets/... -->
+            <div class="d-grid gap-2">
+              <a class="btn btn-primary btn-sm" href="../assets/docs/sae-3-01/sae-3-01-rapport.pdf" target="_blank" rel="noopener">
+                Ouvrir le rapport (PDF)
+              </a>
+              <a class="btn btn-outline-primary btn-sm" href="../assets/docs/sae-3-01/sae-3-01-presentation.pdf" target="_blank" rel="noopener">
+                Ouvrir la présentation (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sections (même structure que SAE 1.01 : une carte par section) -->
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Principe / Contexte</h2>
+        <p class="mb-0">
+          La SAE 3.01 consiste à manipuler un système de transmission radio en combinant théorie et pratique :
+          prise en main d’un matériel SDR (PlutoSDR), construction de chaînes de traitement sous GNU Radio
+          et réalisation de mesures spectrales (Wi-Fi / signaux mobiles) pour interpréter les phénomènes observés.
+        </p>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Objectifs principaux</h2>
+        <ul class="mb-0">
+          <li>Comprendre une chaîne émission/réception et les notions de spectre (bande passante, échantillonnage, FFT).</li>
+          <li>Prendre en main le SDR (PlutoSDR) et valider des chaînes GNU Radio fonctionnelles.</li>
+          <li>Observer des signaux réels (Wi-Fi / GSM / LTE) via des mesures spectrales et interpréter les résultats.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Thèmes abordés</h2>
+        <ul class="mb-0">
+          <li>SDR : principes, limites, réglages (gain, fréquence, échantillonnage).</li>
+          <li>GNU Radio : blocs, flowgraphs, FFT, fenêtres, affichages temps/fréquence.</li>
+          <li>Modulations : notions de modulation/démodulation (selon les manipulations réalisées).</li>
+          <li>Analyse spectrale : occupation de bande, canaux, interférences, comparaison 2,4/5 GHz.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Outils utilisés</h2>
+        <ul class="mb-0">
+          <li>GNU Radio (construction et validation de chaînes SDR).</li>
+          <li>ADALM-Pluto / PlutoSDR (matériel SDR).</li>
+          <li>Analyseur de spectre + antenne directionnelle (mesures RF et observations).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Organisation et déroulement</h2>
+        <ul class="mb-0">
+          <li>Prise en main du matériel et rappel des bases (FFT, bande passante, paramètres SDR).</li>
+          <li>Ateliers GNU Radio (réglages, construction des chaînes, validations progressives).</li>
+          <li>Mesures réelles (Wi-Fi 2,4/5 GHz, observation de signaux, interprétation et synthèse).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Difficultés rencontrées</h2>
+        <ul class="mb-0">
+          <li>Réglages fins (fenêtres FFT, taille FFT, fréquence d’échantillonnage) pour obtenir des mesures lisibles.</li>
+          <li>Interprétation correcte des spectres (pics, bruit, bandes, interférences).</li>
+          <li>Coordination matériel/logiciel (drivers, paramètres SDR, cohérence des réglages).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Note + Auto-éval côte à côte (comme SAE 1.01) -->
+    <div class="row g-3 mb-3">
+      <div class="col-lg-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="h5 mb-2">Note finale</h2>
+            <p class="mb-0"><strong>soutenance orale : 12,50 / 20</strong> </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="h5 mb-2">Auto-évaluation</h2>
+            <p class="mb-2"><strong>Niveau :</strong> <strong>B</strong> — SAE intéressante et “concrète”, mais utilité perçue comme limitée si on ne réutilise pas derrière sur des cas plus appliqués.</p>
+
+            <!-- Mini grille A/B/C/D visuelle (même esprit que SAE 1.01) -->
+            <div class="table-responsive">
+              <table class="table table-sm align-middle text-center mb-0">
+                <thead>
+                  <tr>
+                    <th style="width:25%">A</th>
+                    <th style="width:25%">B</th>
+                    <th style="width:25%">C</th>
+                    <th style="width:25%">D</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Très satisfaisant</td>
+                    <td class="border border-2 border-primary fw-semibold">Satisfaisant</td>
+                    <td>Correct</td>
+                    <td>À améliorer</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-3">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Ce que la SAE m’a appris</h2>
+        <ul class="mb-0">
+          <li>Lire un spectre RF et relier les observations aux notions (canaux, bande passante, interférences).</li>
+          <li>Structurer une chaîne SDR sous GNU Radio (blocs, réglages, validation).</li>
+          <li>Gagner en méthode sur les réglages de mesure (FFT, fenêtres) et l’analyse des résultats.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h2 class="h5 mb-2">Validation</h2>
+        <p class="mb-0">
+          Les livrables (rapport + présentation) synthétisent les manipulations réalisées, les réglages utilisés
+          et l’analyse des mesures spectrales observées.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <a class="btn btn-outline-secondary btn-sm" href="../portfolio.html">← Retour au portfolio</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <div>© Clément Jendryka — BUT R&amp;T</div>
+      <div class="mt-1">
+        <a class="link-light text-decoration-none" href="../mentions-legales.html">Mentions légales</a>
+        <span class="mx-2">|</span>
+        <a class="link-light text-decoration-none" href="../crédits.html">Crédits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
